@@ -1,4 +1,9 @@
 ---
+import { SEO } from "astro-seo";
+
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
 interface Props {
 	title: string;
 }
@@ -15,38 +20,58 @@ const { title } = Astro.props;
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 
+		<!-- Google Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&family=Permanent+Marker&display=swap" rel="stylesheet">
+
+		<SEO
+			title="theRamoShe"
+			description="Baltimore based Content Creator, Web Designer and Developer, Wood Burning Artist, Live Streamer, and all around nice person."
+			openGraph={{
+				basic: {
+				title: "theRamoShe",
+				type: "website",
+				image: "https://new.myte.site/ogimg.png",
+				}
+			}}
+		/>
+
 		<title>{title}</title>
 	</head>
 	<body>
+		<Header />
 		<slot />
+		<Footer />
 	</body>
 </html>
 <style is:global>
 	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
+		--primary:#D86018;
+		--primary-dark: #C64C00;
+		--secondary: #D3449A;
+		--secondary-dark: #960051;
+		--accent: #3D76E1;
+		--accent-dark: #16408D;
+		--black: #141316;
+		--white: #f5f4f5;
+		--gray-light: #B8B3BC;
+		--gray: #7A7382;
+		--gray-dark: #353238;
+
+		--font-primary: 'Nunito', sans-serif;
+		--font-display: 'Permanent Marker', sans-serif;
 	}
 	html {
-		font-family: system-ui, sans-serif;
-		background: #13151a;
-		background-size: 224px;
+		font-family: var(--font-primary);
+		background: var(--black);
 	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
+	body {
+		margin: auto;
+		padding: 1rem;
+		width: 1200px;
+		max-width: calc(100% - 2rem);
+		color: var(--white);
+		font-size: 20px;
 	}
 </style>
