@@ -1,7 +1,55 @@
 ---
+import { Image } from "astro:assets";
+import Logo from "../assets/logo.svg";
+import { ThemeSwitch } from "astro-color-scheme";
+import { Icon } from "astro-icon";
 ---
 <header>
-    <h1>
-        Myte by theRamoShe
-    </h1>
+    <div class="logoname">
+        <Image class="logo" src={Logo} alt="Myte Logo" />
+        <span class="name">MYTE by theRamoShe</span>
+    </div>
+    <div class="toggle">
+        <ThemeSwitch strategy="checkbox" defaultTheme="dark">
+            <input type="checkbox" id="toggle" />
+            <label for="toggle"><Icon  name="heroicons-outline:sun" /></label>
+        </ThemeSwitch>
+    </div>
 </header>
+
+<style>
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        margin: 0 auto;
+        width: 1250px;
+    }
+
+    .logoname {
+        display: flex;
+        align-items: center;
+        column-gap: 1em;
+    }
+    .logo {
+        width: 100px;
+        height: auto;
+    }
+    .name {
+        font-size: 1.4em;
+        font-weight: bold;
+    }
+
+    .toggle input[type='checkbox'] {
+        display: none;
+    }
+    .toggle {
+        width: 40px;
+    }
+    .toggle:hover {
+        background-color: var(--accent);
+
+        border-radius: 10px;
+    }
+</style>
