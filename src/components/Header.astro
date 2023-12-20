@@ -5,10 +5,10 @@ import { ThemeSwitch } from "astro-color-scheme";
 import { Icon } from "astro-icon";
 ---
 <header>
-    <div class="logo-name">
+    <a class="logo-name" href="/">
         <Image class="logo" src={Logo} alt="Myte Logo" />
         <span class="name">MYTE by theRamoShe</span>
-    </div>
+    </a>
     <div class="toggle-button">
         <div class="toggle">
             <ThemeSwitch strategy="checkbox" defaultTheme="dark">
@@ -34,13 +34,14 @@ import { Icon } from "astro-icon";
         display: flex;
         align-items: center;
         column-gap: 1em;
+        text-decoration: none;
+        color: var(--text-color);
     }
     .logo {
         width: 100px;
         height: auto;
     }
     .name {
-        /* font-size: 1.4em; */
         font-weight: bold;
     }
 
@@ -57,7 +58,7 @@ import { Icon } from "astro-icon";
         padding: .5em;
     }
     .toggle:hover {
-        background-color: var(--accent);
+        background-color: var(--accent-contrast);
         border-radius: 10px;
     }
 </style>

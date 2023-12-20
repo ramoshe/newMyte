@@ -49,17 +49,20 @@ const { title } = Astro.props;
 </html>
 <style is:global>
 	:root {
-		--primary:#D86018;
-		--primary-dark: #C64C00;
-		--secondary: #D3449A;
-		--secondary-dark: #960051;
-		--accent: #3D76E1;
-		--accent-dark: #16408D;
 		--black: #141316;
 		--white: #f5f4f5;
-		--gray-light: #B8B3BC;
-		--gray: #7A7382;
-		--gray-dark: #353238;
+		--gray: #B8B3BC;
+		--gray-mid: #7A7382;
+
+		--primary:#D86018;
+		--secondary: #D3449A;
+		--accent: #3D76E1;
+		--primary-contrast: #C64C00;
+		--secondary-contrast: #960051;
+		--accent-contrast: #16408D;
+
+		--background-color: var(--black);
+		--text-color: var(--white);
 
 		--font-primary: 'Nunito', sans-serif;
 		--font-display: 'Permanent Marker', sans-serif;
@@ -68,14 +71,19 @@ const { title } = Astro.props;
 	html {
 		font-family: var(--font-primary);
 		font-size: 20px;
-		--background-color: var(--black);
-		--text-color: var(--white);
 		color: var(--text-color);
 		background-color: var(--background-color);
 	}
-	[data-theme="light"] {
+	[data-theme="light"]:root {
 		--background-color: var(--white);
 		--text-color: var(--black);
+		--primary: #C64C00;
+		--secondary: #960051;
+		--accent: #16408D;
+		--primary-contrast:#D86018;
+		--secondary-contrast: #D3449A;
+		--accent-contrast: #3D76E1;
+		--gray: #353238;
 	}
 	main {
 		margin: 0 auto;
@@ -102,9 +110,6 @@ const { title } = Astro.props;
 		border: 1px solid var(--text-color);
 	}
 	.btn-secondary:hover {
-		background-color: var(--accent-dark);
-	}
-	.light .btn-secondary:hover {
-		background-color: var(--accent);
+		background-color: var(--accent-contrast);
 	}
 </style>
