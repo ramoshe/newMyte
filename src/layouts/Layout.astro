@@ -90,4 +90,21 @@ const { title } = Astro.props;
 			padding: 0 20px;
 		}
 	}
+
+	.btn {
+		margin: 0 1em;
+		padding: .7em 1.4em;
+		border-radius: 50px;
+		text-decoration: none;
+		color: var(--text-color);
+	}
+	.btn-secondary {
+		border: 1px solid var(--text-color);
+	}
+	.btn-secondary:hover {
+		background-color: var(--accent-dark);
+	}
+	.light .btn-secondary:hover {
+		background-color: var(--accent);
+	}
 </style>

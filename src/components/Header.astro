@@ -5,15 +5,18 @@ import { ThemeSwitch } from "astro-color-scheme";
 import { Icon } from "astro-icon";
 ---
 <header>
-    <div class="logoname">
+    <div class="logo-name">
         <Image class="logo" src={Logo} alt="Myte Logo" />
         <span class="name">MYTE by theRamoShe</span>
     </div>
-    <div class="toggle">
-        <ThemeSwitch strategy="checkbox" defaultTheme="dark">
-            <input type="checkbox" id="toggle" />
-            <label for="toggle"><Icon  name="heroicons-outline:sun" /></label>
-        </ThemeSwitch>
+    <div class="toggle-button">
+        <div class="toggle">
+            <ThemeSwitch strategy="checkbox" defaultTheme="dark">
+                <input type="checkbox" id="toggle" />
+                <label for="toggle"><Icon  name="heroicons-outline:sun" /></label>
+            </ThemeSwitch>
+        </div>
+        <a href="/start" class="btn btn-secondary">Get Started</a>
     </div>
 </header>
 
@@ -27,7 +30,7 @@ import { Icon } from "astro-icon";
         width: 1250px;
     }
 
-    .logoname {
+    .logo-name {
         display: flex;
         align-items: center;
         column-gap: 1em;
@@ -37,19 +40,24 @@ import { Icon } from "astro-icon";
         height: auto;
     }
     .name {
-        font-size: 1.4em;
+        /* font-size: 1.4em; */
         font-weight: bold;
     }
 
+    .toggle-button {
+        display: flex;
+        align-items: center;
+    }
     .toggle input[type='checkbox'] {
         display: none;
     }
     .toggle {
-        width: 40px;
+        width: 30px;
+        line-height: 0;
+        padding: .5em;
     }
     .toggle:hover {
         background-color: var(--accent);
-
         border-radius: 10px;
     }
 </style>

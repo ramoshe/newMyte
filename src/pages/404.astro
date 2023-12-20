@@ -3,27 +3,15 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Myte by theRamoShe">
-	<div class="max-w-md text-center">
-        <h2 class="mb-8 font-bold text-9xl">
-          	<span class="sr-only">Error</span>
-          	<span class="text-primary">404</span>
+	<div>
+        <h2>
+          	<span>Error</span>
+          	<span>404</span>
         </h2>
-        <p class="text-3xl font-semibold md:text-3xl">Sorry, we couldn't find this page.</p>
-        <p class="mt-4 mb-8 text-lg text-muted dark:text-stone-400">
+        <p>Sorry, we couldn't find this page.</p>
+        <p>
           	But dont worry, you can find plenty of other things on our homepage.
         </p>
-        <a rel="noopener noreferrer" href="/" class="btn ml-4">Back to homepage</a>
+        <a href="/" class="btn btn-primary">Back to homepage</a>
     </div>
 </Layout>
-
-<style is:global>
-	h2 {
-		color: var(--gray-light);
-		font-family: var(--font-display);
-		text-align: center;
-	}
-	.light h2 {
-		color: var(--gray-dark);
-	}
-
-</style>
