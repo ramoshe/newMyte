@@ -1,5 +1,6 @@
 ---
 import { SEO } from "astro-seo";
+import Resets from '@julian_cataldo/astro-resets/Resets.astro';
 
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
@@ -37,6 +38,15 @@ const { title } = Astro.props;
 			}}
 		/>
 
+		<Resets
+			removeAllMargins={true}
+			fontSmoothing={true}
+			fontSystem={true}
+			scrollSmooth={true}
+			borderBox={true}
+			scrollBarKeep={true}
+		/>
+
 		<title>{title}</title>
 	</head>
 	<body>
@@ -60,6 +70,7 @@ const { title } = Astro.props;
 		--secondary: #D3449A;
 		--accent: #3D76E1;
 		--gray: #B8B3BC;
+		--gray-contrast: #353238;
 		--primary-contrast: #C64C00;
 		--secondary-contrast: #960051;
 		--accent-contrast: #16408D;
@@ -72,6 +83,7 @@ const { title } = Astro.props;
 		--secondary: #960051;
 		--accent: #16408D;
 		--gray: #353238;
+		--gray-contrast: #B8B3BC;
 		--primary-contrast:#D86018;
 		--secondary-contrast: #D3449A;
 		--accent-contrast: #3D76E1;

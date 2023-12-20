@@ -26,6 +26,7 @@ import { Icon } from "astro-icon";
         justify-content: space-between;
         align-items: center;
         margin: 10px auto;
+        padding: 0 20px;
         width: 100%;
         max-width: 1250px;
     }
@@ -53,9 +54,11 @@ import { Icon } from "astro-icon";
         display: none;
     }
     .toggle {
-        width: 30px;
         line-height: 0;
         padding: .5em;
+    }
+    .toggle svg {
+        width: 30px;
     }
     .toggle:hover {
         background-color: var(--accent-contrast);
