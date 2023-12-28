@@ -1,5 +1,6 @@
 import { defineConfig } from 'astro/config';
 // TODO uncomment to initiate Matomo
+// TODO change site url
 // import matomo from "@jop-software/astro-matomo";
 
 import robotsTxt from "astro-robots-txt";
