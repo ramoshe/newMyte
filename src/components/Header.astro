@@ -16,7 +16,7 @@ import { Icon } from "astro-icon";
                 <label for="toggle"><Icon  name="heroicons-outline:sun" /></label>
             </ThemeSwitch>
         </div>
-        <a href="/start" class="btn btn-secondary">Get Started</a>
+        <a href="/start" class="btn btn-secondary start-button">Get Started</a>
     </div>
 </header>
 
@@ -63,5 +63,11 @@ import { Icon } from "astro-icon";
     .toggle:hover {
         background-color: var(--accent-contrast);
         border-radius: 10px;
+    }
+
+    @media (max-width: 800px) {
+        .start-button {
+            display: none;
+        }
     }
 </style>

@@ -70,13 +70,14 @@ import MobileDevelopment from '../../assets/undraw_mobile_development_re_wwsn.pn
 </div>
 
 <style>
+    ul { padding: 0; }
+    li { list-style-type: none; }
     #steps {
         margin: 4em auto 0;
         display: flex;
         justify-content: space-between;
+        align-items: center;
     }
-    ul { padding: 0; }
-    li { list-style-type: none; }
     .section-content, .section-image {
         width: 47%;
     }
@@ -136,5 +137,18 @@ import MobileDevelopment from '../../assets/undraw_mobile_development_re_wwsn.pn
         color: var(--gray);
         font-size: .9em;
         margin: .5em 0 1em;
+    }
+
+    @media (max-width: 800px) {
+        #steps {
+            flex-wrap: wrap;
+        }
+        .section-content {
+            width: 100%;
+        }
+        .section-image {
+            width: 80%;
+            margin: 0 auto;
+        }
     }
 </style>

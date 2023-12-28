@@ -31,7 +31,7 @@ import { Icon } from "astro-icon";
         color: var(--secondary);
     }
     .hero-text {
-        width: 800px;
+        width: 80%;
         color: var(--gray);
         text-align: center;
         margin: 1em auto;
@@ -46,5 +46,14 @@ import { Icon } from "astro-icon";
     .youtube-video {
         aspect-ratio: 16 / 7;
         width: 100%;
+    }
+
+    @media (max-width: 800px) {
+        .hero-buttons {
+            flex-wrap: wrap;
+        }
+        .hero-buttons .btn {
+            width: 80%;
+        }
     }
 </style>

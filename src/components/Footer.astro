@@ -60,13 +60,10 @@ const year = new Date().getFullYear()
     #footer-container {
         display: flex;
         flex-wrap: wrap;
-        width: 100%;
+        width: 90%;
         max-width: 1400px;
         margin: 0 auto;
-    }
-
-    .socials, .links {
-        width: 50%;
+        justify-content: space-between;
     }
 
     .site-title {
@@ -101,5 +98,18 @@ const year = new Date().getFullYear()
         margin-top: 4em;
         font-size: .8em;
         color: var(--gray);
+    }
+
+    @media (max-width: 800px) {
+        #footer-container {
+            justify-content: center;
+        }
+        .links {
+            text-align: center;
+            margin-bottom: 3em;
+        }
+        .links a {
+            margin: 0 .7em;
+        }
     }
 </style>
