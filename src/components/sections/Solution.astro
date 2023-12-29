@@ -2,8 +2,8 @@
 import { Icon } from 'astro-icon';
 import { Image } from 'astro:assets';
 
-import WebsiteBuilder from '../../assets/undraw_website_builder_re_ii6e.png';
-import MobilePosts from '../../assets/undraw_mobile_posts_re_bpuw.png'
+import Image1 from '../../assets/undraw_software_engineer_re_tnjc.svg';
+import Image2 from '../../assets/undraw_web_devices_re_m8sc.svg'
 ---
 <div id="solution" class="section">
     <h3 class="section-heading">
@@ -54,12 +54,12 @@ import MobilePosts from '../../assets/undraw_mobile_posts_re_bpuw.png'
             </ul>
         </div>
         <div class="section-content-image">
-            <Image src={WebsiteBuilder} alt="" />
+            <Image src={Image1} alt="" />
         </div>
     </div>
     <div class="section-content">
         <div class="section-content-image">
-            <Image src={MobilePosts} alt="" />
+            <Image src={Image2} alt="" />
         </div>
         <div class="section-content-text">
             <ul class="content-list">
@@ -137,6 +137,7 @@ import MobilePosts from '../../assets/undraw_mobile_posts_re_bpuw.png'
     }
     .section-content-image, .section-content-text {
         width: 47%;
+        margin-bottom: 2em;
     }
     .section-content-image img {
         width: 100%;
