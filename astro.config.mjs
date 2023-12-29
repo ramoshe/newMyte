@@ -1,7 +1,5 @@
 import { defineConfig } from 'astro/config';
-// TODO uncomment to initiate Matomo
-// TODO change site url
-// import matomo from "@jop-software/astro-matomo";
+import matomo from "@jop-software/astro-matomo";
 
 import robotsTxt from "astro-robots-txt";
 
@@ -10,9 +8,12 @@ import sitemap from "@astrojs/sitemap";
 // https://astro.build/config
 export default defineConfig({
   site: 'https://new.myte.site',
-  integrations: [robotsTxt(), sitemap()]
-  // matomo({
-  //   baseUrl: "https://matomo.ramoshe.com/",
-  //   siteId: 3
-  // })
+  integrations: [
+    robotsTxt(),
+    sitemap(),
+    matomo({
+      baseUrl: "https://matomo.ramoshe.com/",
+      siteId: 3
+    }),
+  ],
 });
